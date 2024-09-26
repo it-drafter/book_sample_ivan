@@ -16,9 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
 @RestController
 @RequestMapping(path = "/api/v1/book")
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class BookController {
     @Autowired
     BookRepository bookRepository;
@@ -60,6 +62,7 @@ public class BookController {
         bookRepository.save(b);
         return new BookDTO(b);
     }
+
 
     @RequestMapping(method=RequestMethod.GET)
     public Iterable<BookDTO> getAllBooks() {

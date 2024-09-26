@@ -13,7 +13,8 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/v1/author")
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class AuthorController {
     @Autowired
     AuthorRepository authorRepository;
